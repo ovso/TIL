@@ -215,21 +215,87 @@ RecyclerView에서 Item마다 새로운 Api 호출하여 아이템 내의 리스
 
 ## Thread 프로세스, Multi Thread 프로세스 장단점
 
-
-
 ## 대칭키와 비대칭키 암호화
 
-## Queue 설명
+**대칭키**는 송신자와 수신자가 같은 키로 암호화, 복호화 하는 것을 말한다. 대표적인 알고리즘으로 AES, DES가 있다.
+
+**공개 키 암호 방식**(公開 - 暗號 方式, public-key cryptography)은 [암호 방식](https://ko.wikipedia.org/wiki/암호학)의 한 종류로 사전에 비밀 키를 나눠가지지 않은 사용자들이 안전하게 통신할 수 있도록 한다. 공개 키 암호 방식에서는 공개 키와 비밀 키가 존재하며, 공개 키는 누구나 알 수 있지만 그에 대응하는 비밀 키는 키의 소유자만이 알 수 있어야 한다. 공개 키는 보안 타협 없이 공개적으로 배포가 가능하다.[[1\]](https://ko.wikipedia.org/wiki/공개_키_암호_방식#cite_note-1) 공개 키 암호를 구성하는 알고리즘은 [대칭 키 암호](https://ko.wikipedia.org/wiki/대칭_키_암호) 방식과 비교하여 **비대칭 암호**(非對稱暗號)라고 부르기도 한다. 대표적인 알고리즘으로 RSA가 있다.
+
+[대칭 키 암호]([https://ko.wikipedia.org/wiki/%EB%8C%80%EC%B9%AD_%ED%82%A4_%EC%95%94%ED%98%B8](https://ko.wikipedia.org/wiki/대칭_키_암호))
+
+[공개 키 암호 방식(비대칭 키 암호)]([https://ko.wikipedia.org/wiki/%EA%B3%B5%EA%B0%9C_%ED%82%A4_%EC%95%94%ED%98%B8_%EB%B0%A9%EC%8B%9D](https://ko.wikipedia.org/wiki/공개_키_암호_방식))
+
+## Queue 설명( Java )
+
+큐는 큐의 끝에 요소를 삽입하고 큐의 시작에서 제거하는 데 사용됩니다. FIFO 개념을 따릅니다. 
+
+Java의 Queue는 삽입, 삭제 등 Collection 인터페이스의 모든 메소드를 지원합니다. 
+
+LinkedList, ArrayBlockingQueue 및 PriorityQueue는 가장 자주 사용되는 구현입니다. 
+
+BlockingQueues에서 널 작업이 수행되면 NullPointerException이 발생합니다.
+
+[Queue Interface In Java](https://www.geeksforgeeks.org/queue-interface-java/)
 
 ## Volatile 설명
 
+Java 휘발성 키워드는 변수 가시성 문제를 해결하기위한 것입니다. 카운터 변수를 휘발성으로 선언하면 카운터 변수에 대한 모든 쓰기가 즉시 주 메모리에 다시 기록됩니다. 또한 카운터 변수의 모든 읽기는 주 메모리에서 직접 읽습니다.
+
+[Java Volatile Keyword](http://tutorials.jenkov.com/java-concurrency/volatile.html)
+
 ## 싱글톤 DCL 단점
+
+
 
 ## Rx 설명, 장단점
 
+ReactiveX는 관찰 가능한 시퀀스를 사용하여 비동기 및 이벤트 기반 프로그램을 작성하기위한 라이브러리입니다.
+
+### 장점
+
+비동기 프로그래밍이 편하다.
+
+2개 이상의 Api를 연속적으로 사용할 때 콜백에 큰 부담이 없다. (콜백 지옥으로 부터 벗어날 수 있다)
+
+### 단점
+
+대부분의 시간 동안 스트림을 기반으로하기 때문에 대부분의 데이터 스트림을 저장하는 데 더 많은 메모리가 필요합니다.
+
+학습 비용이 높다.
+
 ## 함수형 프로그래밍 설명, 장단점
 
+### 설명
+
+**함수형 프로그래밍**(functional programming)은 자료 처리를 [수학적 함수](https://ko.wikipedia.org/wiki/함수)의 계산으로 취급하고 상태와 가변 데이터를 멀리하는 [프로그래밍 패러다임](https://ko.wikipedia.org/wiki/프로그래밍_패러다임)의 하나이다. [명령형 프로그래밍](https://ko.wikipedia.org/wiki/명령형_프로그래밍)에서는 상태를 바꾸는 것을 강조하는 것과는 달리, 함수형 프로그래밍은 함수의 응용을 강조한다. 프로그래밍이 [문](https://ko.wikipedia.org/wiki/문_(프로그래밍))이 아닌 식이나 선언으로 수행되는 [선언형 프로그래밍](https://ko.wikipedia.org/wiki/선언형_프로그래밍) 패러다임을 따르고 있다.[[1\]](https://ko.wikipedia.org/wiki/함수형_프로그래밍#cite_note-expression_style-1) 함수형 프로그래밍은 1930년대에 계산가능성, 결정문제, 함수정의, 함수응용과 재귀를 연구하기 위해 개발된 형식체계인 [람다 대수](https://ko.wikipedia.org/wiki/람다_대수)에 근간을 두고 있다. 다수의 함수형 [프로그래밍 언어](https://ko.wikipedia.org/wiki/프로그래밍_언어)들은 람다 연산을 발전시킨 것으로 볼 수 있다.
+
+### 장점
+
+불변성(Immutability) : 함수형 프로그래밍은 불변성을 지향하여 사이드 이팩트를 줄이거나 제거한다. 불변성이기 때문에 검증하기도 수월하다. Thread-Safe 한 것도 장점 중의 하나다.
+
+First-class, higher-order functions : 함수형 프로그래밍에서 함수는 일등 시민(first-class citizen)입니다. 일등 시민으로서의 함수란 변수에 할당할 수 있고, 다른 함수의 인자로 전달할 수 있으며, 다른 함수의 결과 값으로 반환될 수 있는 함수를 의미합니다. 함수를 하나의 값처럼 다룰 수 있기 때문에 객체지향 패러다임에서 클래스를 재사용하는 것처럼 함수를 재사용할 수 있고, 핵심 코드를 boilerplate 없이 간단하게 표현할 수 있습니다.
+
+Lazy evaluation : 함수형 프로그래밍 언어는 지연 연산(lazy evaluation)을 지원합니다. 지연 연산이란 어떤 값이 실제로 쓰이기 전까지 그 값의 계산을 최대한 미루는 것입니다. 값을 미리 계산하여 저장하지 않기 때문에 공간을 절약할 수 있고, 값이 꼭 필요할 때만 계산하기 때문에 프로그램의 성능에도 긍정적인 영향을 줍니다. 
+
+### 단점
+
+상태가 없다. 불변을 지향하기 때문에 상태가 없다. 하지만 사용자(User)와의 상호작용(Interaction)은 대부분 상태 변화로 모델링 된다.
+
+코드가 간결해질 수록 보기 어렵다.
+
+인력이 부족하다.
+
+[Five Drawbacks/Downsides of Functional Programming](https://spin.atomicobject.com/2019/08/29/functional-prog-pros-cons/)
+
+[Functional Programming(함수형 프로그래밍)](https://devhue.github.io/blog/functional-programming)
+
 ## 프로세스와 쓰레드 설명
+
+**프로세스**는 프로그램에 지정된 적절한 조치를 수행 할 수있는 프로그램의 실행입니다. 프로그램이 실행되는 실행 단위로 정의 될 수 있습니다. OS는 CPU가 사용하는 프로세스를 생성, 예약 및 종료하는 데 도움이됩니다. 기본 프로세스에 의해 생성 된 다른 프로세스를 자식 프로세스라고합니다.
+
+**스레드**는 프로세스의 일부인 실행 단위입니다. 프로세스는 동시에 실행되는 여러 스레드를 가질 수 있습니다. 동시 프로그래밍에서 실행 단위입니다. 스레드는 가벼우 며 스케줄러에서 독립적으로 관리 할 수 있습니다. 병렬 처리를 사용하여 응용 프로그램 성능을 향상시키는 데 도움이됩니다.
+
+[Process vs Thread: What's the difference?](https://www.guru99.com/difference-between-process-and-thread.html)
 
 ## 오버헤드
 
