@@ -1,5 +1,7 @@
 # Android Interview Questions
 
+## 알고리즘 코딩테스트
+
 ## 사전 과제 코드 리뷰
 
 ## 과제 진행 소요시간
@@ -245,7 +247,11 @@ Java 휘발성 키워드는 변수 가시성 문제를 해결하기위한 것입
 
 ## 싱글톤 DCL 단점
 
+Thread-Safe 하지 않다.
 
+[Singleton - Lazy Initialize와 DCL(Double checked locking)](http://blog.daum.net/smufu/3)
+
+[Double-checked locking and the Singleton pattern](https://www.ibm.com/developerworks/library/j-dcl/index.html)
 
 ## Rx 설명, 장단점
 
@@ -302,6 +308,27 @@ Lazy evaluation : 함수형 프로그래밍 언어는 지연 연산(lazy evaluat
 오버헤드(overhead)는 어떤 처리를 하기 위해 들어가는 간접적인 처리 시간 · 메모리 등을 말한다. 
 
 예를 들어 A라는 처리를 단순하게 실행한다면 10초 걸리는데, 안전성을 고려하고 부가적인 B라는 처리를 추가한 결과 처리시간이 15초 걸렸다면, 오버헤드는 5초가 된다. 또한 이 처리 B를 개선해 B'라는 처리를 한 결과, 처리시간이 12초가 되었다면, 이 경우 오버헤드가 3초 단축되었다고 말한다.
+
+## AndroidManifest
+
+### launchMode
+
+[android:launchMode](https://developer.android.com/guide/topics/manifest/activity-element?hl=ko#lmode) 는 액티비티를 시작하는 방법에 대한 지침이다. 인텐트를 처리하기 위해 액티비티를 호출할 때 발생하는 것을 결정하기 위해 `Intent` 객체에서 액티비티 플래그(`FLAG_ACTIVITY_*` 상수)와 함께 작동하는 4개의 모드가 있다. 그 드는 다음과 같다.
+
+`standard`
+`singleTop`
+`singleTask`
+`singleInstance`
+
+기본 모드는 `standard` 다.
+
+### taskAffinity
+
+[android:taskAffinity](https://developer.android.com/guide/topics/manifest/activity-element?hl=ko#aff)
+
+## Kotlin Nothing
+
+
 
 # 참고
 
