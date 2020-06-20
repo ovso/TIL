@@ -326,9 +326,29 @@ Lazy evaluation : 함수형 프로그래밍 언어는 지연 연산(lazy evaluat
 
 [android:taskAffinity](https://developer.android.com/guide/topics/manifest/activity-element?hl=ko#aff)
 
-## Kotlin Nothing
+## Kotlin Nothing, Unit
+
+## Kotlin error
+
+Checked
+
+Unchecked
+
+왜?
+
+## Inflate ?
 
 ## RxJava Subject
+
+## Fragment를 newInstance로 생성하는 이유
+
+Fragment를 newInstance로 생성하는 이유는 관례가 아니라 재생성 때문이다. 메모리나 크래시 등의 이유로 프래그먼트가 파괴 됐을때 안드로이드는 다시 프래그먼트를 재생성하는데 그 때 기본 생성자를 사용한다. 때문에 개발자는 newInstance를 통해 기본생성자를 사용해야 한다.
+
+[instantiate]([https://developer.android.com/reference/android/app/Fragment?hl=ko#instantiate(android.content.Context,%20java.lang.String,%20android.os.Bundle)](https://developer.android.com/reference/android/app/Fragment?hl=ko#instantiate(android.content.Context, java.lang.String, android.os.Bundle))
+
+[Android Fragment newInstance()로 생성하는 이유](https://m.blog.naver.com/PostView.nhn?blogId=tpgns8488&logNo=220989078813&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+[왜 Fragment는 기본 생성자를 사용해야만 하는가?](https://lanace.github.io/articles/why-do-not-use-arguments-in-fragment/)
 
 # 참고
 
