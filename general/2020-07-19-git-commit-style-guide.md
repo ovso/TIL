@@ -62,3 +62,6 @@ feat: 메인화면에서 상세 화면으로 이동하는 아이콘 추가
 
 
 
+## 참고
+
+[https://udacity.github.io/git-styleguide/](https://udacity.github.io/git-styleguide/)
