@@ -14,10 +14,10 @@ adb와 scrcpy를 자주 사용하는 필자로서는 `emulator offline` 라인�
 - emulator-5554에 대당하는 에뮬레이터를 Android Studio에서 실행한다. AVD가 여러개 설정되어 있다면 어느 것인지 알수가 없다. 하나 하나 실행해 보는 수밖에 없다. 에뮬레이터가 잘 실행되면 그 에뮬레이터는 emulator-5554가 아니다. offline이 뜬 에뮬레이터는 에러를 뱉는다.
 
 - ```
-  Error while waiting for device: AVD Galaxy_S10_API_29 is already running.
-  If that is not the case, delete the files at
+  Error while waiting for device: AVD Galaxy_S10_API_29 is already running. // 이미 실행중이야.
+  If that is not the case, delete the files at // 그렇지 않으면 다음 위치에서 모든 lock 파일을 삭제해.
      /Users/xxx/.android/avd/Galaxy_S10_API_29.avd/*.lock
-  and try again.
+  and try again. // 다시 시도해봐.
   ```
 
   위와 같은 에러를 뱉었다면 offline된 에뮬레이터가 맞다.
