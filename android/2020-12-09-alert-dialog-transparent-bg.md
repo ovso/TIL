@@ -58,3 +58,9 @@ class WriterSelectDialog(context: Context) : AlertDialog.Builder(context) {
 }
 ```
 
+AlertDialog의 배경을 투명하게 구현하면서 새롭게 알게된 사실 하나!  안드로이드에서 제공하는 컬러값을 android.R.color.black 과 같은 리소스아이디 방식이 아닌 컬러값(`android.graphics.Color.TRANSPARENT`)을 바로 가져올 수 있다는것을 알게됐다.
+
+```kotlin
+ColorDrawable(android.graphics.Color.TRANSPARENT)
+```
+
